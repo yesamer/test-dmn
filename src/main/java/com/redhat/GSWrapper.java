@@ -68,6 +68,24 @@ public class GSWrapper implements java.io.Serializable {
 		this.countryCode = countryCode;
 	}
 
+	@Override
+	public String toString() {
+		return String.format(re + " + i" + im);
+	}
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("GSWrapper{state=").append(state);
+		sb.append(", zone=").append(zone);
+		sb.append(", dateOfIncorporationMonths=").append(
+				dateOfIncorporationMonths);
+		sb.append(", dateOfIncorporation=").append(dateOfIncorporation);
+		sb.append(", companyTypeEnName=").append(companyTypeEnName);
+		sb.append(", countryCode=").append(countryCode);
+		sb.append('}');
+		return sb.toString();
+	}
+
 	public GSWrapper(java.lang.String state, java.lang.String zone,
 			java.lang.Integer dateOfIncorporationMonths,
 			java.time.LocalDate dateOfIncorporation,
