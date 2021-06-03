@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_E455D9DC-A97E-4322-98CA-321EC2F5BB63" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_057CCBE0-568D-43D1-8DD9-0E1E9B4DE003" name="Schedule" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_E455D9DC-A97E-4322-98CA-321EC2F5BB63">
+  <dmn:extensionElements/>
+  <dmn:decision id="_8FF4401B-BB0B-4B5D-AE16-A43C4E6FAA44" name="user">
+    <dmn:variable id="_86770D8E-AFA8-4D24-9772-95B1F16C333A" name="user" typeRef="string"/>
+    <dmn:informationRequirement id="_91BD9644-85AD-4491-901E-9EF96581E938">
+      <dmn:requiredInput href="#_65D694A6-E1D7-4A20-8E7D-FC9BCF21F869"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_281C90D3-C3A3-4F3C-BCE5-95B1BB89D19F" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_7DEC6577-66F0-42E2-8D12-A45E139CD01D">
+        <dmn:inputExpression id="_5A81259D-6B9A-4CB6-9C9B-8EA3BCDBA6F7" typeRef="date">
+          <dmn:text>arrivalDate</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_574E6B0B-19CC-4361-AF13-EFAD2FC1C25E" typeRef="string"/>
+      <dmn:rule id="_50B104D4-B7EC-48E2-860C-32C908ED5046">
+        <dmn:inputEntry id="_4733D7B2-1553-4911-9512-673948923834">
+          <dmn:text>[date and time("2019-09-01T12:00:00")..date and time("2019-09-30T12:00:00")]</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_40956363-8B12-48D2-AE27-453C1FDAE0CB">
+          <dmn:text>"amministratore"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:inputData id="_65D694A6-E1D7-4A20-8E7D-FC9BCF21F869" name="arrivalDate">
+    <dmn:variable id="_D84F7CA7-9130-4793-86B3-20901D954183" name="arrivalDate" typeRef="date"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_281C90D3-C3A3-4F3C-BCE5-95B1BB89D19F">
+            <kie:width>50.0</kie:width>
+            <kie:width>301.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-_8FF4401B-BB0B-4B5D-AE16-A43C4E6FAA44" dmnElementRef="_8FF4401B-BB0B-4B5D-AE16-A43C4E6FAA44" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="459" y="153" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_65D694A6-E1D7-4A20-8E7D-FC9BCF21F869" dmnElementRef="_65D694A6-E1D7-4A20-8E7D-FC9BCF21F869" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="279" y="152" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_91BD9644-85AD-4491-901E-9EF96581E938" dmnElementRef="_91BD9644-85AD-4491-901E-9EF96581E938">
+        <di:waypoint x="379" y="177"/>
+        <di:waypoint x="459" y="178"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
