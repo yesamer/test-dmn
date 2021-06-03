@@ -6,12 +6,77 @@ package com.redhat;
 
 public class GSWrapper implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public GSWrapper() {
-    }
+	private java.lang.String state;
+	private java.lang.String zone;
+	private java.lang.Integer dateOfIncorporationMonths;
+	private java.time.LocalDate dateOfIncorporation;
+	private java.lang.String companyTypeEnName;
+	private java.lang.Integer countryCode;
 
+	public GSWrapper() {
+	}
 
+	public java.lang.String getState() {
+		return this.state;
+	}
 
+	public void setState(java.lang.String state) {
+		this.state = state;
+	}
+
+	public java.lang.String getZone() {
+		return this.zone;
+	}
+
+	public void setZone(java.lang.String zone) {
+		this.zone = zone;
+	}
+
+	public java.lang.Integer getDateOfIncorporationMonths() {
+		return this.dateOfIncorporationMonths;
+	}
+
+	public void setDateOfIncorporationMonths(
+			java.lang.Integer dateOfIncorporationMonths) {
+		this.dateOfIncorporationMonths = dateOfIncorporationMonths;
+	}
+
+	public java.time.LocalDate getDateOfIncorporation() {
+		return this.dateOfIncorporation;
+	}
+
+	public void setDateOfIncorporation(java.time.LocalDate dateOfIncorporation) {
+		this.dateOfIncorporation = dateOfIncorporation;
+	}
+
+	public java.lang.String getCompanyTypeEnName() {
+		return this.companyTypeEnName;
+	}
+
+	public void setCompanyTypeEnName(java.lang.String companyTypeEnName) {
+		this.companyTypeEnName = companyTypeEnName;
+	}
+
+	public java.lang.Integer getCountryCode() {
+		return this.countryCode;
+	}
+
+	public void setCountryCode(java.lang.Integer countryCode) {
+		this.countryCode = countryCode;
+	}
+
+	public GSWrapper(java.lang.String state, java.lang.String zone,
+			java.lang.Integer dateOfIncorporationMonths,
+			java.time.LocalDate dateOfIncorporation,
+			java.lang.String companyTypeEnName, java.lang.Integer countryCode) {
+		this.state = state;
+		this.zone = zone;
+		this.dateOfIncorporationMonths = dateOfIncorporationMonths;
+		this.dateOfIncorporation = dateOfIncorporation;
+		this.companyTypeEnName = companyTypeEnName;
+		this.countryCode = countryCode;
+	}
 
 }
