@@ -6,12 +6,23 @@ package com.redhat;
 
 public class SimpleWrapper implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public SimpleWrapper() {
-    }
+	private java.lang.String name;
 
+	public SimpleWrapper() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public SimpleWrapper(java.lang.String name) {
+		this.name = name;
+	}
 
 }
