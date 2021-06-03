@@ -6,12 +6,34 @@ package com.redhat;
 
 public class DocumentPojo implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public DocumentPojo() {
-    }
+	private java.lang.String docName;
+	private java.util.List<java.lang.Integer> footNoteCodes;
 
+	public DocumentPojo() {
+	}
 
+	public java.lang.String getDocName() {
+		return this.docName;
+	}
 
+	public void setDocName(java.lang.String docName) {
+		this.docName = docName;
+	}
+
+	public java.util.List<java.lang.Integer> getFootNoteCodes() {
+		return this.footNoteCodes;
+	}
+
+	public void setFootNoteCodes(java.util.List<java.lang.Integer> footNoteCodes) {
+		this.footNoteCodes = footNoteCodes;
+	}
+
+	public DocumentPojo(java.lang.String docName,
+			java.util.List<java.lang.Integer> footNoteCodes) {
+		this.docName = docName;
+		this.footNoteCodes = footNoteCodes;
+	}
 
 }
