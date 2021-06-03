@@ -70,10 +70,6 @@ public class GSWrapper implements java.io.Serializable {
 
 	@Override
 	public String toString() {
-		return String.format(re + " + i" + im);
-	}
-	@Override
-	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("GSWrapper{state=").append(state);
 		sb.append(", zone=").append(zone);
