@@ -31,6 +31,15 @@ public class Document implements java.io.Serializable {
 		this.footNoteCodes = footNoteCodes;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Document{docName=").append(docName);
+		sb.append(", footNoteCodes=").append(footNoteCodes);
+		sb.append('}');
+		return sb.toString();
+	}
+
 	public Document(java.lang.String docName,
 			java.util.List<java.math.BigDecimal> footNoteCodes) {
 		this.docName = docName;
