@@ -42,15 +42,6 @@ public class Document implements java.io.Serializable {
 		this.footNoteCodes = footNoteCodes;
 	}
 
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("Document{docName=").append(docName);
-		sb.append(", footNoteCodes=").append(footNoteCodes);
-		sb.append('}');
-		return sb.toString();
-	}
-
 	public java.lang.String getDocumentENname() {
 		return this.documentENname;
 	}
@@ -104,5 +95,25 @@ public class Document implements java.io.Serializable {
 		this.documentFRName = documentFRName;
 		this.proofOfExistence = proofOfExistence;
 	}
+	
+	public Document(java.lang.String docName,
+			java.util.List<java.math.BigDecimal> footNoteCodes) {
+		this.docName = docName;
+		this.footNoteCodes = footNoteCodes;
+	}	
+	
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Document{docName=").append(docName);
+		sb.append(", footNoteCodes=").append(footNoteCodes);
+		sb.append(", documentENname=").append(documentENname);
+		sb.append(", documentDEName=").append(documentDEName);
+		sb.append(", documentITName=").append(documentITName);
+		sb.append(", documentFRName=").append(documentFRName);
+		sb.append('}');
+		return sb.toString();
+	}	
 
 }
