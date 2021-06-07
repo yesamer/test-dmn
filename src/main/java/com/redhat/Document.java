@@ -12,6 +12,16 @@ public class Document implements java.io.Serializable {
 	private java.lang.String docName;
 	private java.util.List<java.math.BigDecimal> footNoteCodes;
 
+	private java.lang.String documentENname;
+
+	private java.lang.String documentDEName;
+
+	private java.lang.String documentITName;
+
+	private java.lang.String documentFRName;
+
+	private java.lang.String proofOfExistence;
+
 	public Document() {
 	}
 
@@ -41,10 +51,58 @@ public class Document implements java.io.Serializable {
 		return sb.toString();
 	}
 
+	public java.lang.String getDocumentENname() {
+		return this.documentENname;
+	}
+
+	public void setDocumentENname(java.lang.String documentENname) {
+		this.documentENname = documentENname;
+	}
+
+	public java.lang.String getDocumentDEName() {
+		return this.documentDEName;
+	}
+
+	public void setDocumentDEName(java.lang.String documentDEName) {
+		this.documentDEName = documentDEName;
+	}
+
+	public java.lang.String getDocumentITName() {
+		return this.documentITName;
+	}
+
+	public void setDocumentITName(java.lang.String documentITName) {
+		this.documentITName = documentITName;
+	}
+
+	public java.lang.String getDocumentFRName() {
+		return this.documentFRName;
+	}
+
+	public void setDocumentFRName(java.lang.String documentFRName) {
+		this.documentFRName = documentFRName;
+	}
+
+	public java.lang.String getProofOfExistence() {
+		return this.proofOfExistence;
+	}
+
+	public void setProofOfExistence(java.lang.String proofOfExistence) {
+		this.proofOfExistence = proofOfExistence;
+	}
+
 	public Document(java.lang.String docName,
-			java.util.List<java.math.BigDecimal> footNoteCodes) {
+			java.util.List<java.math.BigDecimal> footNoteCodes,
+			java.lang.String documentENname, java.lang.String documentDEName,
+			java.lang.String documentITName, java.lang.String documentFRName,
+			java.lang.String proofOfExistence) {
 		this.docName = docName;
 		this.footNoteCodes = footNoteCodes;
+		this.documentENname = documentENname;
+		this.documentDEName = documentDEName;
+		this.documentITName = documentITName;
+		this.documentFRName = documentFRName;
+		this.proofOfExistence = proofOfExistence;
 	}
 
 }
