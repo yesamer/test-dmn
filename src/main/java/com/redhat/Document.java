@@ -22,6 +22,8 @@ public class Document implements java.io.Serializable {
 
 	private java.lang.String proofOfExistence;
 
+	private java.lang.Boolean documentInSourceAndCSLangRequired;
+
 	public Document() {
 	}
 
@@ -83,25 +85,10 @@ public class Document implements java.io.Serializable {
 	}
 
 	public Document(java.lang.String docName,
-			java.util.List<java.math.BigDecimal> footNoteCodes,
-			java.lang.String documentENname, java.lang.String documentDEName,
-			java.lang.String documentITName, java.lang.String documentFRName,
-			java.lang.String proofOfExistence) {
-		this.docName = docName;
-		this.footNoteCodes = footNoteCodes;
-		this.documentENname = documentENname;
-		this.documentDEName = documentDEName;
-		this.documentITName = documentITName;
-		this.documentFRName = documentFRName;
-		this.proofOfExistence = proofOfExistence;
-	}
-	
-	public Document(java.lang.String docName,
 			java.util.List<java.math.BigDecimal> footNoteCodes) {
 		this.docName = docName;
 		this.footNoteCodes = footNoteCodes;
-	}	
-	
+	}
 
 	@Override
 	public String toString() {
@@ -112,8 +99,35 @@ public class Document implements java.io.Serializable {
 		sb.append(", documentDEName=").append(documentDEName);
 		sb.append(", documentITName=").append(documentITName);
 		sb.append(", documentFRName=").append(documentFRName);
+		sb.append(", documentInSourceAndCSLangRequired=").append(
+				documentInSourceAndCSLangRequired);
 		sb.append('}');
 		return sb.toString();
-	}	
+	}
+
+	public java.lang.Boolean getDocumentInSourceAndCSLangRequired() {
+		return this.documentInSourceAndCSLangRequired;
+	}
+
+	public void setDocumentInSourceAndCSLangRequired(
+			java.lang.Boolean documentInSourceAndCSLangRequired) {
+		this.documentInSourceAndCSLangRequired = documentInSourceAndCSLangRequired;
+	}
+
+	public Document(java.lang.String docName,
+			java.util.List<java.math.BigDecimal> footNoteCodes,
+			java.lang.String documentENname, java.lang.String documentDEName,
+			java.lang.String documentITName, java.lang.String documentFRName,
+			java.lang.String proofOfExistence,
+			java.lang.Boolean documentInSourceAndCSLangRequired) {
+		this.docName = docName;
+		this.footNoteCodes = footNoteCodes;
+		this.documentENname = documentENname;
+		this.documentDEName = documentDEName;
+		this.documentITName = documentITName;
+		this.documentFRName = documentFRName;
+		this.proofOfExistence = proofOfExistence;
+		this.documentInSourceAndCSLangRequired = documentInSourceAndCSLangRequired;
+	}
 
 }
