@@ -10,6 +10,18 @@
   <description></description>
   <dependencies>
     <dependency>
+      <groupId>org.jbpm</groupId>
+      <artifactId>jbpm-bpmn2</artifactId>
+      <version>7.52.0.Final-redhat-00007</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jbpm</groupId>
+      <artifactId>jbpm-flow</artifactId>
+      <version>7.52.0.Final-redhat-00007</version>
+      <scope>provided</scope>
+    </dependency>	  
+    <dependency>
       <groupId>org.kie</groupId>
       <artifactId>kie-api</artifactId>
       <version>7.52.0.Final-redhat-00007</version>
